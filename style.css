@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(108, 253, 157);
+}
+
+#your_custom_canvas_id {
+    display: none;
+}
+
+#heading {
+    margin: 2%;
+    text-align: center;
+}
+
+#message {
+    text-align: center;
+}
+
+#main_div {
+    display: flex;
+    justify-content: center;
+}
+
+#rock,
+#paper,
+#scissor {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+
+#rock_btn,
+#paper_btn,
+#scissor_btn {
+    border: 2px solid black;
+    border-radius: 50%;
+    vertical-align: middle;
+    height: 180px;
+    width: 180px;
+}
+
+#rock_btn:hover,
+#paper_btn:hover,
+#scissor_btn:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0.5);
+
+}
+
+#rock_btn {
+    background-image: url(./rock_img.JPG);
+    background-position: center;
+}
+
+#rock_btn:hover,
+#rock_btn:active,
+#rock_btn:focus {
+    box-shadow: 0 10px 15px #F1547F;
+    scale: 1.05;
+}
+
+#paper_btn {
+    background-image: url(./paper_img.JPG);
+    background-position: center;
+}
+
+#paper_btn:hover,
+#paper_btn:active,
+#paper_btn:focus {
+    box-shadow: 0 10px 15px #ffde53;
+    scale: 1.05;
+}
+
+#scissor_btn {
+    background-image: url(./scissor_img.JPG);
+    background-position: center;
+}
+
+#scissor_btn:hover,
+#scissor_btn:active,
+#scissor_btn:focus {
+    box-shadow: 0 10px 15px #7fcfda;
+    scale: 1.05;
+}
+
+#start-game-btn {
+    margin: 20px auto;
+    display: block;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#start-game-btn:hover,
+#start-game-btn:active {
+    box-shadow: 0 10px 15px #000000;
+    scale: 1.1;
+}
+
+button:hover,
+button:active {
+    cursor: pointer;
+
+}

@@ -20,11 +20,9 @@ const confetti = function () {
 document.getElementById("rock_btn").addEventListener("click", function () {
   userSelection = ROCK;
 });
-
 document.getElementById("paper_btn").addEventListener("click", function () {
   userSelection = PAPER;
 });
-
 document.getElementById("scissor_btn").addEventListener("click", function () {
   userSelection = SCISSORS;
 });
@@ -35,10 +33,15 @@ const getPlayerChoice = function () {
     userSelection !== PAPER &&
     userSelection !== SCISSORS
   ) {
-    alert(`Invalid Selection  we have selected ${ROCK} for you`);
-    return DEFAULT_VALUE;
+    alert(`Invalid Selection Please select your choice`);
+    gameIsRunning = false;
+    userSelection = null;
+    messageHandler.style.display = "none";
+    return;
+  } else {
+    messageHandler.style.display = "block";
+    return userSelection;
   }
-  return userSelection;
 };
 
 const getComputerChoice = function () {
@@ -74,7 +77,6 @@ startGameBtn.addEventListener("click", function () {
   console.log("game is starting..");
   const playerSelection = getPlayerChoice();
   let messageHandler = document.getElementById("message");
-
   messageHandler.innerHTML = `Player's Choice: ${playerSelection}<br>`;
   console.log(playerSelection);
   const computerSelection = getComputerChoice();
@@ -96,6 +98,7 @@ startGameBtn.addEventListener("click", function () {
     console.log('"You lose!!! "' + message + " so Computer Win");
     messageHandler.innerHTML += "You lose!!!";
   }
-  messageHandler.innerHTML;
+
   gameIsRunning = false;
+  userSelection = null;
 });
